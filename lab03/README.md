@@ -770,23 +770,3 @@ public final class Main {
 
 ---
 
-### 10. Сборка, тестирование и запуск
-
-Требуются JDK 17+ и Maven. Из папки `lab03-inheritance-polymorphism`:
-
-```bash
-mvn clean verify
-java -jar target/lab03-inheritance-polymorphism-1.0.0.jar
-```
-
-Для тестов отдельно: `mvn test`. Дополнительные входные файлы не нужны.
-
-В текущем окружении Maven отсутствует в PATH. Фактически выполнена команда Maven из IntelliJ IDEA с ранее подготовленным кешем зависимостей:
-
-```bash
-"/home/ilyshka/Загрузки/idea-2026.2.2/idea-IU-262.10315.125/plugins/maven-plugin/lib/maven3/bin/mvn" -o -Dmaven.repo.local=/tmp/lab02-maven-repository -B clean verify
-```
-
-Проверено 09.10.2026: Maven 3.9.16, OpenJDK 25.0.4.1, `BUILD SUCCESS`; 26 тестов без ошибок и пропусков; JAR успешно запущен. `javap -verbose` подтвердил major version 61, соответствующую Java 17. На самом JDK 17 запуск отдельно не выполнялся. Временный кеш `/tmp` не входит в проект; обычный Maven использует свой стандартный кеш.
-
-В IntelliJ IDEA подключите `pom.xml` этой лабораторной через **Add as Maven Project**, затем запускайте её `src/Main.java` и тесты. Каждый проект использует собственные классы и каталог `target/`; подключать `src/` разных лабораторных как исходники одного модуля не следует.
