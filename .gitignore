@@ -28,3 +28,16 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Скомпилированные файлы
+out/
+target/
+
+# Системные файлы macOS
+.DS_Store
+
+# Java
+*.class
